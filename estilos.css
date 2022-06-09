@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-area {
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    height: 100vh;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+
+header div img {
+    width: 50%;
+    padding-bottom: 50px;
+    ;
+}
+
+.logo {
+
+    text-align: center;
+    grid-area: header;
+}
+
+
+.imagenes {
+    display: flex;
+    align-items: center;
+}
+
+.imagenes img {
+    width: 30%;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+
+.formularioConsultorio {
+    background-color: rgb(228, 183, 183);
+    border-top: 1px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    ;
+    grid-area: main;
+}
+
+form {
+    display: flex;
+    padding-right: 50px;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.formulario {
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.titulo {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    color: rgb(133, 121, 121);
+    text-decoration: underline;
+}
+
+/* footer {
+    grid-area: footer;
+    background-color: gray;
+    border: 1px solid black;
+} */
