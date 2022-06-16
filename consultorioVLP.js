@@ -86,4 +86,16 @@ desestructurar(tipoDeConsulta)
 let precios = {Normal:1500,Inbody:3000,Deportologo:5000}
 let precio={ ...precios }
 console.log( precio)  
+
+function obtenerConsultas () {
+    const URLGET= "https://jsonplaceholder.typicode.com/posts"
+    fetch(URLGET)
+        .then ((resultado) => resultado.json())
+        .then((data) => {
+            let numeros = data.id;
+            console.log (numeros)
+        });
+}
+
+obtenerConsultas()
     
