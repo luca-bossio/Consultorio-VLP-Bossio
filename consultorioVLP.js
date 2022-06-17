@@ -91,10 +91,7 @@ function obtenerConsultas () {
     const URLGET= "https://jsonplaceholder.typicode.com/posts"
     fetch(URLGET)
         .then ((resultado) => resultado.json())
-        .then((data) => {
-            let numeros = data.id;
-            console.log (numeros)
-        });
+        .then((data) =>console.log (data));
 }
 
 obtenerConsultas()
