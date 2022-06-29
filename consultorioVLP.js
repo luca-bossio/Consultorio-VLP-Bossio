@@ -12,6 +12,10 @@ for (const nombres of nombre) {
     console.log (salida)
 }
 
+
+    let email = document.getElementById("email").value
+    localStorage.setItem("email",email)
+
     let fecha =  document.getElementById("fecha").value
     localStorage.setItem("fecha",fecha)
 
@@ -56,6 +60,7 @@ for (const nombres of nombre) {
         'Tu consulta fue agendada con exito!',
         `Fecha: ${localStorage.getItem("fecha")}
         Horario: ${localStorage.getItem("horario")}
+        Email: ${localStorage.getItem("email")}
         Tipo: ${tipo}
         Precio: $${precioDeLaConsulta}
         `,
