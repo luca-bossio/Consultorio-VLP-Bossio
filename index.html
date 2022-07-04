@@ -31,12 +31,6 @@
                 </div>
             </div>
             <div class="formulario">
-            <label for="inputNombre3" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="email"  action="https://formsubmit.co/your@email.com" method="POST">
-            </div>
-        </div>
-            <div class="formulario">
                 <label for="inputfecha3" class="col-sm-2 col-form-label">Fecha en la que quiere la consulta</label>
                 <div class="col-sm-10">
                     <input type="number" class="form-control" id="fecha">
@@ -64,6 +58,12 @@
                         <option value="2">2</option>
                         <option value="3">3</option>
                       </select>
+                </div>
+                <div class="formulario">
+                    <label for="inputNombre3" class="col-sm-2 col-form-label">Agrega tu email para enviar todos tus datos </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email"  action="https://formsubmit.co/your@email.com" method="POST">
+                    </div>
                 </div>
                
                 <div class="formulario">
@@ -100,16 +100,3 @@
 
 
 
-curl "https://api.postmarkapp.com/email" \
-  -X POST \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -H "X-Postmark-Server-Token: server token" \
-  -d '{
-  "From": "sender@example.com",
-  "To": "receiver@example.com",
-  "Subject": "Postmark test",
-  "TextBody": "Hello dear Postmark user.",
-  "HtmlBody": "<html><body><strong>Hello</strong> dear Postmark user.</body></html>",
-  "MessageStream": "outbound"
-}'
