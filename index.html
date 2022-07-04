@@ -34,12 +34,12 @@
             <div class="formulario">
                 <label for="inputfecha3" class="col-sm-2 col-form-label">Fecha en la que quiere la consulta</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="fecha">
+                    <input type="date" min="2022-07-06" max="2023-01-01" value="2022-07-06" class="form-control" id="fecha">
                 </div>
                 <div class="formulario">
                     <label for="inputHorario3" class="col-sm-2 col-form-label">Horario</label>
                     <div class="col-sm-10">
-                        <input type="number" class="form-control" id="horario">
+                        <input type="time"  value="8:00" class="form-control" id="horario">
                     </div>
                 </div>
                 <div class="formulario">
@@ -49,6 +49,23 @@
                         <option value="1">Consulta Normal</option>
                         <option value="2">InBody</option>
                         <option value="3">Consulta con deportologo</option>
+                    </select>
+                </div>
+                <div class="formulario">
+                    <label for="inputconsulta3" class="col-sm-2 col-form-label">Como quiere hacer la consulta:</label>
+                    <select class="form-select" id="formaConsulta" aria-label="Default select example">
+                        <option selected>Forma de la Consulta</option>
+                        <option value="1">Consulta presencial</option>
+                        <option value="2">Consulta online</option>
+                    </select>
+                </div>
+                <div class="formulario">
+                    <label for="inputconsulta3" class="col-sm-2 col-form-label">Medio por el cual se va a atender</label>
+                    <select class="form-select" id="atencion" aria-label="Default select example">
+                        <option selected>Tipo de medio por el cual se va a atender</option>
+                        <option value="1">Osde</option>
+                        <option value="2">Swiss Medical</option>
+                        <option value="3">Atencion particular</option>
                     </select>
                 </div>
                 <div class="formulario">

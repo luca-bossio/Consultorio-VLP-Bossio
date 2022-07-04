@@ -25,6 +25,12 @@ for (const nombres of nombre) {
     let consulta = document.getElementById("consulta").value
     localStorage.setItem("consulta",consulta)
 
+    let formaConsulta = document.getElementById("formaConsulta").value
+    localStorage.setItem("formaConsulta",formaConsulta)
+
+    let atencion = document.getElementById("atencion").value
+    localStorage.setItem("atencion",atencion)
+
     let paciente = document.getElementById("pacientes").value
     localStorage.setItem("cantPaciente",paciente)
 
@@ -54,6 +60,29 @@ for (const nombres of nombre) {
             break
     }
 
+    let tipoConsulta = localStorage.getItem("formaConsulta");
+    switch(tipoConsulta){
+        case "1":
+            tipoConsulta = "consulta presencial";
+            break
+        case "2":
+            tipoConsulta = "consulta online";
+            break
+    }
+
+    let tipoAtencion = localStorage.getItem("atencion");
+    switch(tipoAtencion){
+        case "1":
+            tipoAtencion = "Osde";
+            break
+        case "2":
+            tipoAtencion = "Swiss Medical";
+            break
+        case "3":
+            tipoAtencion = "Atencion particular";
+            break
+    }
+
     
 
     Swal.fire (
@@ -62,6 +91,8 @@ for (const nombres of nombre) {
         Horario: ${localStorage.getItem("horario")}
         Email: ${localStorage.getItem("email")}
         Tipo: ${tipo}
+        Forma: ${tipoConsulta}
+        Medio de atencion: ${tipoAtencion}
         Precio: $${precioDeLaConsulta}
         `,
         'success'
