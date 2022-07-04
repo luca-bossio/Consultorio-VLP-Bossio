@@ -70,8 +70,9 @@ form {
     text-decoration: underline;
 }
 
-/* footer {
-    grid-area: footer;
-    background-color: gray;
-    border: 1px solid black;
-} */
+
+
+#pie {
+    border-top: 2px solid black;
+   
+}
